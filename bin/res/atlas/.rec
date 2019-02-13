@@ -1,0 +1,76 @@
+D .
+D comp
+P 9401CC40 blank.png
+P B03390E5 btn_close.png
+P 1F3929EA button.png
+P 6CC6DF97 checkbox.png
+P FB94CCF2 clip_num.png
+P F7B6B7D7 clip_selectBox.png
+P 755271AE clip_tree_arrow.png
+P 859FD34C clip_tree_folder.png
+P A0E3B8F9 combobox.png
+P 9EDA959E hscroll$bar.png
+P 1AB768D4 hscroll$down.png
+P 685261D3 hscroll$up.png
+P 274B8076 hscroll.png
+P E466EB1C hslider$bar.png
+P C4BECA54 hslider.png
+P 5EDC128C html.png
+P ACFFCCCF image.png
+P D12221A9 img_bg.png
+P 5EDC128C label.png
+P 5EDC128C linkbutton.png
+P 9E4DD730 progress$bar.png
+P 3FD78E12 progress.png
+P BF898D6A radio.png
+P BF898D6A radiogroup.png
+P 8CFD9D35 tab.png
+P BDA71F88 textarea.png
+P BDA71F88 textinput.png
+P 52107B89 vscroll$bar.png
+P E26B933E vscroll$down.png
+P B9680947 vscroll$up.png
+P 7E990267 vscroll.png
+P E466EB1C vslider$bar.png
+P 2BFF7046 vslider.png
+D threeDimen
+P 821032AF layabox.png
+P 40CFAF5A monkey.png
+R 69B1A2D2 pbrlut.js
+D threeDimen/scene
+D threeDimen/scene/LayaScene_dudeScene
+D threeDimen/scene/LayaScene_dudeScene/Conventional
+R C87C3578 dudeScene.ls
+D threeDimen/scene/LayaScene_dudeScene/Conventional/Assets
+P 76A5E1DC layabox.jpg
+R 43A7EE6C Sky.lmat
+D threeDimen/scene/LayaScene_dudeScene/Conventional/Library
+R 1AC7A60D unity default resources-Capsule.lm
+R 1B9D0F79 unity default resources-Cube.lm
+R C808FB11 unity default resources-Cylinder.lm
+R D6203CA6 unity default resources-Plane.lm
+R 12DFCF1D unity default resources-Sphere.lm
+D threeDimen/scene/LayaScene_dudeScene/Conventional/Assets/dude
+R 08AC85A2 dude1-dude1-dude1Avatar.lav
+R 4B549EF6 dude1-him.lm
+R 007A9C3B dude1-Take 001.lani
+R 6AA9DE64 head.jpg
+R A1200CE4 headN.jpg
+P 7227CFC6 headS.png
+R 691CE96E jacket.jpg
+R C197C64C jacketN.jpg
+P 9019ED3C jacketS.png
+R A07D3C4B pants.jpg
+R 125649B3 pantsN.jpg
+P 60BBAFCB pantsS.png
+R 2E9FAB97 upBodyC.jpg
+P 9A1FBC2C upBodyCS.png
+R CCF99063 upbodyN.jpg
+D threeDimen/scene/LayaScene_dudeScene/Conventional/Assets/Materials
+R 98E17290 head.lmat
+R B8068B4C jacket.lmat
+R EC65E8A1 layabox 14.lmat
+R 05966B03 layabox 17.lmat
+R B79A3EE6 layabox.lmat
+R 71AF9DE2 pants.lmat
+R 87744516 upBodyC.lmat
