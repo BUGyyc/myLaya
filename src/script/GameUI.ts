@@ -1,4 +1,5 @@
 import { ui } from "./../ui/layaMaxUI";
+import CreateScene2 from "./CreateScene2";
 /**
  * 本示例采用非脚本的方式实现，而使用继承页面基类，实现页面逻辑。在IDE里面设置场景的Runtime属性即可和场景进行关联
  * 相比脚本方式，继承式页面类，可以直接使用页面定义的属性（通过IDE内var属性定义），比如this.tipLbll，this.scoreLbl，具有代码提示效果
@@ -7,32 +8,58 @@ import { ui } from "./../ui/layaMaxUI";
 export default class GameUI extends ui.test.TestSceneUI {
     constructor() {
         super();
-		
-        //添加3D场景
-        var scene: Laya.Scene3D = Laya.stage.addChild(new Laya.Scene3D()) as Laya.Scene3D;
+        Laya.loader.load("res/layabox.png", Laya.Handler.create(this, function () {
+            var scene: Laya.Scene3D = new Laya.Scene3D();
+            Laya.stage.addChild(scene);
+            scene.addComponent(CreateScene2);
+        }));
 
-        //添加照相机
-        var camera: Laya.Camera = (scene.addChild(new Laya.Camera(0, 0.1, 100))) as Laya.Camera;
-        camera.transform.translate(new Laya.Vector3(0, 3, 3));
-        camera.transform.rotate(new Laya.Vector3(-30, 0, 0), true, false);
- 
-        //添加方向光
-        var directionLight: Laya.DirectionLight = scene.addChild(new Laya.DirectionLight()) as Laya.DirectionLight;
-        directionLight.color = new Laya.Vector3(0.9, 0.2, 0.9);
-        directionLight.transform.worldMatrix.setForward(new Laya.Vector3(1, -1, 0));
+        // //添加3D场景
+        // var scene: Laya.Scene3D = Laya.stage.addChild(new Laya.Scene3D()) as Laya.Scene3D;
 
-        //添加自定义模型
-        var box: Laya.MeshSprite3D = scene.addChild(new Laya.MeshSprite3D(Laya.PrimitiveMesh.createBox(1, 1, 1))) as Laya.MeshSprite3D;
-        box.transform.rotate(new Laya.Vector3(0, 45, 0), false, false);
-        var material: Laya.BlinnPhongMaterial = new Laya.BlinnPhongMaterial();
-		Laya.Texture2D.load("/layabox.png", Laya.Handler.create(null, function(tex:Laya.Texture2D) {
-				material.albedoTexture = tex;
-		}));
-        box.meshRenderer.material = material;
+        // //添加照相机
+        // var camera: Laya.Camera = (scene.addChild(new Laya.Camera(0, 0.1, 100))) as Laya.Camera;
+        // camera.transform.translate(new Laya.Vector3(0, 3, 3));
+        // camera.transform.rotate(new Laya.Vector3(-30, 0, 0), true, false);
 
-        var vect:Laya.Vector3 = new Laya.Vector3(1,1,0);
-        Laya.timer.loop(10,this,function(){
-            box.transform.rotate(vect,true,false);
-        });
+        // //添加方向光
+        // var directionLight: Laya.DirectionLight = scene.addChild(new Laya.DirectionLight()) as Laya.DirectionLight;
+        // directionLight.color = new Laya.Vector3(0.9, 0.2, 0.9);
+        // directionLight.transform.worldMatrix.setForward(new Laya.Vector3(1, -1, 0));
+
+        // //添加自定义模型
+        // var box: Laya.MeshSprite3D = scene.addChild(new Laya.MeshSprite3D(Laya.PrimitiveMesh.createBox(1, 1, 1))) as Laya.MeshSprite3D;
+        // box.transform.rotate(new Laya.Vector3(0, 45, 0), false, false);
+        // var material: Laya.BlinnPhongMaterial = new Laya.BlinnPhongMaterial();
+        // Laya.Texture2D.load("/layabox.png", Laya.Handler.create(null, function(tex:Laya.Texture2D) {
+        // 		material.albedoTexture = tex;
+        // }));
+        // box.meshRenderer.material = material;
+
+        // var vect:Laya.Vector3 = new Laya.Vector3(1,1,0);
+        // Laya.timer.loop(10,this,function(){
+        //     box.transform.rotate(vect,true,false);
+        // });
+
+        // var spr:Laya.MeshSprite3D = this.scene.addChild(new Laya.MeshSprite3D(Laya.PrimitiveMesh.createSphere(1,10,10))) as Laya.MeshSprite3D;
+        // spr.transform.rotate(new Laya.Vector3(0,90,0),false,false);
+        // spr.transform.translate(new Laya.Vector3(0,5,0));
+        // spr.meshRenderer.material = material;
+        // spr.addComponent(Laya.PhysicsCollider);
+        // var rig:Laya.Rigidbody3D = spr.addComponent(Laya.Rigidbody3D);
+        // rig.colliderShape = new Laya.SphereColliderShape(1);
+
+        // var floor:Laya.MeshSprite3D = this.scene.addChild(new Laya.MeshSprite3D(Laya.PrimitiveMesh.createPlane(10,10))) as Laya.MeshSprite3D;
+        // var floorCollider:Laya.PhysicsCollider = floor.addComponent(Laya.PhysicsCollider);
+        // floorCollider.colliderShape = new Laya.BoxColliderShape(10,0,10);//
+
+        // Laya.timer.loop(1000,this,function(){
+        //     var clone:Laya.MeshSprite3D = Laya.Sprite3D.instantiate(spr) as Laya.MeshSprite3D;
+        //     clone.transform.translate(new Laya.Vector3(0,5,0));
+        //     this.scene.addChild(clone);
+        // });
+
+
+        // this.addComponent();
     }
 }

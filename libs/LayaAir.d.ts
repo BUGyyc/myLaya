@@ -316,6 +316,7 @@ declare module laya.wx.mini {
         static sendJsonDataToDataContext(url: string): void;
     }
 }
+
 declare module laya.webgl {
     class WebGLContext {
         static DEPTH_BUFFER_BIT: number;

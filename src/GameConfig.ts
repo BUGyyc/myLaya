@@ -7,14 +7,14 @@ import GameUI from "./script/GameUI"
 export default class GameConfig{
     static width:number=640;
     static height:number=1136;
-    static scaleMode:string="fixedwidth";
+    static scaleMode:string=" ";
     static screenMode:string="none";
     static alignV:string="top";
     static alignH:string="left";
-    static startScene:any="test/PartScene2.scene";
+    static startScene:any="test/TestScene.scene";
     static sceneRoot:string="";
     static debug:boolean=false;
-    static stat:boolean=false;
+    static stat:boolean=false; 
     static physicsDebug:boolean=false;
     static exportSceneToJson:boolean=true;
     constructor(){}
