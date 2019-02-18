@@ -1,5 +1,7 @@
 import { ui } from "./../ui/layaMaxUI";
+import CreateScene from "./CreateScene";
 import CreateScene2 from "./CreateScene2";
+import CreateScene3 from "./CreateScene3";
 import CameraMoveScript from "./CameraMoveScript";
 /**
  * 本示例采用非脚本的方式实现，而使用继承页面基类，实现页面逻辑。在IDE里面设置场景的Runtime属性即可和场景进行关联
@@ -12,7 +14,7 @@ export default class GameUI extends ui.test.TestSceneUI {
         Laya.loader.load("res/layabox.png", Laya.Handler.create(this, function () {
             var scene: Laya.Scene3D = new Laya.Scene3D();
             Laya.stage.addChild(scene);
-            scene.addComponent(CreateScene2);
+            scene.addComponent(CreateScene3);
             // scene.addComponent(CameraMoveScript);
         }));
 

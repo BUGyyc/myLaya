@@ -32,13 +32,14 @@ export default class CameraMoveScript extends Laya.Script{
     }
 
     private onMouseWheel(e:Laya.Event):void{
+        // var postion = this.camera.transform.position;
         if(e.delta > 0){
             var a = new Laya.Vector3(0,0,0);
             var b = new Laya.Vector3(0,0,0);
-            // this.camera.transform.position - a = b;
-
+            // postion += this.camera.transform.T
+            this.camera.fieldOfView += 1;
         }else{
-
+            this.camera.fieldOfView -= 1;
         }
     }
 
@@ -62,7 +63,7 @@ export default class CameraMoveScript extends Laya.Script{
         // laya.
         console.log("time - ");
         // state.
-        this.updateCamera();
+      //  this.updateCamera();
     }
 
     private updateCamera():void{
@@ -89,7 +90,7 @@ export default class CameraMoveScript extends Laya.Script{
         if(Math.abs(yprElem[1]) < 1.5){
             Laya.Quaternion.createFromYawPitchRoll(yprElem[0],yprElem[1],yprElem[2],this.tempRotationZ);
             this.camera.transform.localRotation = this.tempRotationZ;
-        }
+        }  
     }
 
     onEnable(){
