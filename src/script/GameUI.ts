@@ -1,5 +1,6 @@
 import { ui } from "./../ui/layaMaxUI";
 import CreateScene2 from "./CreateScene2";
+import CameraMoveScript from "./CameraMoveScript";
 /**
  * 本示例采用非脚本的方式实现，而使用继承页面基类，实现页面逻辑。在IDE里面设置场景的Runtime属性即可和场景进行关联
  * 相比脚本方式，继承式页面类，可以直接使用页面定义的属性（通过IDE内var属性定义），比如this.tipLbll，this.scoreLbl，具有代码提示效果
@@ -12,6 +13,7 @@ export default class GameUI extends ui.test.TestSceneUI {
             var scene: Laya.Scene3D = new Laya.Scene3D();
             Laya.stage.addChild(scene);
             scene.addComponent(CreateScene2);
+            // scene.addComponent(CameraMoveScript);
         }));
 
         // //添加3D场景
